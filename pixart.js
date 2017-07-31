@@ -26,11 +26,11 @@ $square.on("click", function(event) {
 	event.preventDefault();
 })
 
-$square.on("click", function(event) {
-	// console.log(event.target);
-	$(event.target).css("background", $input[0].value);
-	event.preventDefault();
-})
+// $square.on("click", function(event) {
+// 	// console.log(event.target);
+// 	$(event.target).css("background", $input[0].value);
+// 	event.preventDefault();
+// })
 
 $square.on("mouseover", function(event) {
 	// console.log(event.target);
@@ -53,8 +53,10 @@ $button.on("click", function(event) {
 		}
 		$.ajax(settings).done(function(response) { 
 			console.log(response.Poster);
+			
 			$square.on("click", function(ev) {
-				$(ev.target).css("background", response.Poster);
+				console.log(ev);
+				$(ev.target).css("background", 'url(' + response.Poster + ')');
 				event.preventDefault();
 			})
 
