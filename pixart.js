@@ -19,3 +19,10 @@ for(var i = 0; i < 20; i++) {
 	var $newDiv = $('<div>').addClass('square');
 	$body.append($newDiv);
 }
+
+var $square = $('.square');
+$square.on("click", function(event) {
+	console.log(event.target);
+	$(event.target).css("background", "green");
+	event.preventDefault();
+})
