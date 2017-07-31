@@ -22,7 +22,12 @@ for(var i = 0; i < 20; i++) {
 
 var $square = $('.square');
 $square.on("click", function(event) {
-	console.log(event.target);
 	$(event.target).css("background", "green");
+	event.preventDefault();
+})
+
+$square.on("click", function(event) {
+	// console.log(event.target);
+	$(event.target).css("background", $input[0].value);
 	event.preventDefault();
 })
