@@ -31,3 +31,24 @@ $square.on("click", function(event) {
 	$(event.target).css("background", $input[0].value);
 	event.preventDefault();
 })
+
+$square.on("mouseover", function(event) {
+	// console.log(event.target);
+	$(event.target).css("background", $input[0].value);
+	event.preventDefault();
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
