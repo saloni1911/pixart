@@ -39,7 +39,28 @@ $square.on("mouseover", function(event) {
 })
 
 
+$button.on("click", function(event) {
+	console.log(event);
+	console.log(event.target);
+	event.preventDefault();
 
+	var settings = {
+		url: 'http://omdbapi.com/',
+		data: {
+			t: $input[0].value, 
+			apiKey: '2f6435d9'
+			}
+		}
+		$.ajax(settings).done(function(response) { 
+			console.log(response.Poster);
+			$square.on("click", function(ev) {
+				$(ev.target).css("background", response.Poster);
+				event.preventDefault();
+			})
+
+		})
+
+})
 
 
 
